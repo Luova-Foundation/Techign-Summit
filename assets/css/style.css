@@ -688,16 +688,93 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Speakers Section
 --------------------------------------------------------------*/
+#team {
+  padding: 60px 0 30px 0;
+  text-align: center;
+  font-family:"Raleway", sans-serif;
+}
+
+#team .container h3{
+  font-family:"Raleway", sans-serif;
+  text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #9195a2;
+}
+
+#team h3 {
+  color: rgb(43, 41, 41);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-align:center;
+  justify-content: center;
+  position: relative;
+  display: inline-block;
+}
+
+#team p {
+  text-align:center;
+  color: rgb(43, 41, 41);
+  font-size: 15px;
+  margin-bottom: 10px;
+  
+  justify-content: center;
+  position: relative;
+  display: inline-block;
+}
+
+#team img {
+  border-radius: 50%;
+}
+
+
+#team .img-container {
+float: left;
+width: 33.33%;
+padding: 30px;
+}
+
+#team .clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+
 #speakers {
   padding: 60px 0 30px 0;
 }
+
 
 #speakers .speaker {
   position: relative;
   overflow: hidden;
   margin-bottom: 30px;
-  width: 416px;
-  height: 416px;
+  width: 300px;
+  height: 300px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#speakers .img-container {
+  float: left;
+  width: 33.33%;
+  padding: 30px;
+}
+
+#speakers .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 #speakers .speaker .details {
@@ -734,7 +811,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 2px;
 }
 
-#speakers .speaker .details a {
+#speakers a {
   color: #fff;
 }
 
@@ -914,173 +991,12 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
-#venue {
-  padding: 60px 0;
-}
 
-#venue .container-fluid {
-  margin-bottom: 3px;
-}
 
-#venue .venue-map iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-}
 
-#venue .venue-info {
-  background: url("../img/venue-info-bg.jpg") top center no-repeat;
-  background-size: cover;
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 
-#venue .venue-info:before {
-  content: "";
-  background: rgba(13, 20, 41, 0.8);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
 
-#venue .venue-info h3 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #fff;
-}
 
-@media (max-width: 574px) {
-  #venue .venue-info h3 {
-    font-size: 24px;
-  }
-}
-
-#venue .venue-info p {
-  color: #fff;
-  margin-bottom: 0;
-}
-
-#venue .venue-gallery-container {
-  padding-right: 12px;
-}
-
-#venue .venue-gallery {
-  overflow: hidden;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid #fff;
-}
-
-#venue .venue-gallery img {
-  transition: all ease-in-out 0.4s;
-}
-
-#venue .venue-gallery:hover img {
-  transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# Hotels Section
---------------------------------------------------------------*/
-#hotels {
-  padding: 60px 0;
-}
-
-#hotels .hotel {
-  border: 1px solid #e0e5fa;
-  background: #fff;
-  margin-bottom: 30px;
-}
-
-#hotels .hotel:hover .hotel-img img {
-  transform: scale(1.1);
-}
-
-#hotels .hotel-img {
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-#hotels .hotel-img img {
-  transition: 0.3s ease-in-out;
-}
-
-#hotels h3 {
-  font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 5px;
-  padding: 0 20px;
-}
-
-#hotels a {
-  color: #152b79;
-}
-
-#hotels a:hover {
-  color: #f82249;
-}
-
-#hotels .stars {
-  padding: 0 20px;
-  margin-bottom: 5px;
-}
-
-#hotels .stars i {
-  color: #ffc31d;
-}
-
-#hotels p {
-  padding: 0 20px;
-  margin-bottom: 20px;
-  color: #060c22;
-  font-style: italic;
-  font-size: 15px;
-}
-
-/*--------------------------------------------------------------
-# Gallery Section
---------------------------------------------------------------*/
-#gallery {
-  padding: 60px;
-  overflow: hidden;
-}
-
-#gallery .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-#gallery .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #f82249;
-}
-
-#gallery .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #f82249;
-}
-
-#gallery .swiper-slide-active {
-  text-align: center;
-}
-
-@media (min-width: 992px) {
-  #gallery .swiper-wrapper {
-    padding: 40px 0;
-  }
-  #gallery .swiper-slide-active {
-    border: 5px solid #f82249;
-    padding: 4px;
-    background: #fff;
-    z-index: 1;
-    transform: scale(1.15);
-    margin-top: 6px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Sponsors Section
@@ -1180,75 +1096,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.6s;
 }
 
-/*--------------------------------------------------------------
-# Subscribe Section
---------------------------------------------------------------*/
-#subscribe {
-  padding: 60px;
-  background: url(../img/subscribe-bg.jpg) center center no-repeat;
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-}
 
-#subscribe:before {
-  content: "";
-  background: rgba(6, 12, 34, 0.6);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-@media (min-width: 1024px) {
-  #subscribe {
-    background-attachment: fixed;
-  }
-}
-
-#subscribe .section-header h2, #subscribe p {
-  color: #fff;
-}
-
-#subscribe input {
-  background: #fff;
-  color: #060c22;
-  border: 0;
-  outline: none;
-  margin: 0;
-  padding: 9px 20px;
-  border-radius: 50px;
-  font-size: 14px;
-}
-
-@media (min-width: 767px) {
-  #subscribe input {
-    min-width: 400px;
-  }
-}
-
-#subscribe button {
-  border: 0;
-  padding: 9px 25px;
-  cursor: pointer;
-  background: #f82249;
-  color: #fff;
-  transition: all 0.3s ease;
-  outline: none;
-  font-size: 14px;
-  border-radius: 50px;
-}
-
-#subscribe button:hover {
-  background: #e0072f;
-}
-
-@media (max-width: 460px) {
-  #subscribe button {
-    margin-top: 10px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Buy Tickets Section
